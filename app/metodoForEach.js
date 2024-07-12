@@ -1,6 +1,8 @@
 let elementoParaInserirLivros = document.querySelector('#livros');
+let valorTotal = document.querySelector('#valor_total_livros_disponiveis');
 
 function exibirLivros(listaDeLivros){
+    valorTotal.innerHTML='';
     elementoParaInserirLivros.innerHTML='';
     listaDeLivros.forEach(livro => {
         let disponivel = livro.quantidade > 0 ? "livro__imagens" : "livro__imagens indisponivel" 
